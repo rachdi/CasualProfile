@@ -15,3 +15,4 @@ Route::get('/', function () {
 	return view('welcome');
 });
 Route::get('profil/home','ProfileController@getProfile');
+Route::get('profil/json','ProfileController@json_encode');
