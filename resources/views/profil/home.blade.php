@@ -12,7 +12,9 @@
 		<label><h1>Street Adress : <?=$profils->streetAddress?></h1></label><br>
 		<label><h1>Phone Number : <?=$profils->e164PhoneNumber?></h1></label><br>
 		<label><h1>Job Title : <?=$profils->jobTitle?></h1></label><br>
-		
+		<form>
+			<input type="button" onClick="history.go(0)" value="Reload">
+		</form><br>
 		
 	</center>	
 
