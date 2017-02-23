@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get('profil/home','ProfileController@getProfile');
 Route::get('profil/json','ProfileController@json_encode');
+
