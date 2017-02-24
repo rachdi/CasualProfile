@@ -8,19 +8,40 @@ use Faker;
 
 class ProfileController extends Controller
 {
+
 	public function getProfile(){
 		$faker = Faker\Factory::create('fr_FR');
 		return view('profil.home',['profils'=>$faker]);
 	}
-	
+
 	public function json_encode(Request $request){
 		$faker = Faker\Factory::create('fr_FR');
 		return response()
 		->json(['firstName' =>$faker->firstName, 'lastName' => $faker->lastName,'streetAddress' =>$faker->streetAddress,'e164PhoneNumber' =>$faker->e164PhoneNumber,'jobTitle' =>$faker->jobTitle])
 		->withCallback($request->input('callback'));
-		
+
 
 
 	}
 	
 }
+
+
+
+
+
+
+	// public function getProfile(){
+	// 	$faker = Faker\Factory::create('fr_FR');
+	// 	return view('profil.home',['profils'=>$faker]);
+	// }
+
+	// public function json_encode(Request $request){
+	// 	$faker = Faker\Factory::create('fr_FR');
+	// 	return response()
+	// 	->json(['firstName' =>$faker->firstName, 'lastName' => $faker->lastName,'streetAddress' =>$faker->streetAddress,'e164PhoneNumber' =>$faker->e164PhoneNumber,'jobTitle' =>$faker->jobTitle])
+	// 	->withCallback($request->input('callback'));
+
+
+
+	// }
